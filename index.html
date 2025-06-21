@@ -5,21 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سيلفر - محفظة شخصية</title>
     
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
-    <!-- Google Fonts -->
-    <!-- Updated to include Cairo font for titles and navigation -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Owl Carousel -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     
-    <!-- AOS Animation Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     
     <style>
@@ -44,7 +38,6 @@
             color: #fff;
             /* Adjust for RTL */
             text-align: right; 
-            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         
         h1, h2, h3, h4, h5, h6 {
@@ -818,7 +811,6 @@
                 background-color: rgba(10, 10, 10, 0.95);
                 padding: 20px;
                 border-radius: 10px;
-                margin: 0; /* FIX: This resets the margin for the collapsed menu */
             }
             
             .navbar-nav .nav-item {
@@ -833,8 +825,12 @@
                 font-size: 1rem;
             }
 
-            .hero .offset-lg-6 {
-                margin-right: 0; /* FIX: Remove offset on medium screens */
+            .hero .hero-content {
+                 justify-content: center;
+                 text-align: center;
+            }
+            .hero .hero-text {
+                text-align: center;
             }
         }
         
@@ -854,33 +850,18 @@
             .about-image {
                 margin-bottom: 30px;
             }
-
-            .hero .hero-content {
-                 justify-content: center;
-                 text-align: center;
-            }
-            .hero .hero-text {
-                text-align: center;
-            }
-
-            .hero-shape {
-                display: none; /* FIX: Hide decorative shape causing overflow */
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Preloader -->
     <div id="preloader">
         <div class="loader"></div>
     </div>
     
-    <!-- Scroll To Top Button -->
     <div class="scroll-to-top">
         <i class="fas fa-arrow-up"></i>
     </div>
     
-    <!-- Header -->
     <header class="header">
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
@@ -917,7 +898,6 @@
         </nav>
     </header>
     
-    <!-- Hero Section - EDITED -->
     <section id="home" class="hero">
         <div class="hero-shape shape2"></div>
         <div class="container">
@@ -932,7 +912,6 @@
                             <a href="#contact" class="btn btn-outline-primary">اتصل بي</a>
                         </div>
                         <div class="social-icons">
-                            <!-- Updated Social Media Icons -->
                             <a href="mailto:john@example.com"><i class="fas fa-envelope"></i></a>
                             <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
                             <a href="https://www.researchgate.net/profile/yourprofile" target="_blank"><i class="fab fa-researchgate"></i></a>
@@ -943,7 +922,6 @@
         </div>
     </section>
     
-    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <div class="row">
@@ -998,7 +976,6 @@
         </div>
     </section>
     
-    <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
             <div class="row">
@@ -1068,7 +1045,6 @@
         </div>
     </section>
     
-    <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="row">
@@ -1097,7 +1073,6 @@
                         <div class="portfolio-overlay">
                             <h4>مشروع تصميم ويب</h4>
                             <p>تصميم ويب، تطوير</p>
-                            <!-- Changed to open modal -->
                             <a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a>
                         </div>
                     </div>
@@ -1108,7 +1083,6 @@
                         <div class="portfolio-overlay">
                             <h4>واجهة مستخدم تطبيق جوال</h4>
                             <p>تصميم تطبيقات، UI/UX</p>
-                            <!-- Changed to open modal -->
                             <a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a>
                         </div>
                     </div>
@@ -1119,7 +1093,6 @@
                         <div class="portfolio-overlay">
                             <h4>هوية العلامة التجارية</h4>
                             <p>العلامات التجارية، تصميم شعار</p>
-                            <!-- Changed to open modal -->
                             <a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a>
                         </div>
                     </div>
@@ -1130,7 +1103,6 @@
                         <div class="portfolio-overlay">
                             <h4>تصوير المنتجات</h4>
                             <p>تصوير فوتوغرافي</p>
-                            <!-- Changed to open modal -->
                             <a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a>
                         </div>
                     </div>
@@ -1141,7 +1113,6 @@
                         <div class="portfolio-overlay">
                             <h4>موقع تجارة إلكترونية</h4>
                             <p>تصميم ويب، تطوير</p>
-                            <!-- Changed to open modal -->
                             <a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a>
                         </div>
                     </div>
@@ -1152,7 +1123,6 @@
                         <div class="portfolio-overlay">
                             <h4>واجهة مستخدم تطبيق لياقة بدنية</h4>
                             <p>تصميم تطبيقات، UI/UX</p>
-                            <!-- Changed to open modal -->
                             <a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a>
                         </div>
                     </div>
@@ -1161,7 +1131,6 @@
         </div>
     </section>
     
-    <!-- Resume Section -->
     <section id="resume" class="resume">
         <div class="container">
             <div class="row">
@@ -1231,7 +1200,6 @@
         </div>
     </section>
     
-    <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
             <div class="row">
@@ -1323,7 +1291,6 @@
         </div>
     </section>
     
-    <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
         <div class="container">
             <div class="row">
@@ -1382,7 +1349,6 @@
         </div>
     </section>
     
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="row">
@@ -1456,7 +1422,6 @@
                                 <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
                             </div>
                         </div>
-                        <!-- Message display area -->
                         <div id="contactMessage" class="mt-3"></div>
                     </form>
                 </div>
@@ -1464,7 +1429,6 @@
         </div>
     </section>
     
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -1475,7 +1439,6 @@
         </div>
     </footer>
 
-    <!-- Portfolio Image Modal -->
     <div class="modal fade portfolio-modal" id="portfolioModal" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
@@ -1492,7 +1455,6 @@
         </div>
     </div>
     
-    <!-- JS Files -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
