@@ -44,6 +44,7 @@
             color: #fff;
             /* Adjust for RTL */
             text-align: right; 
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         
         h1, h2, h3, h4, h5, h6 {
@@ -830,6 +831,10 @@
             
             .hero-text p {
                 font-size: 1rem;
+            }
+
+            .hero .offset-lg-6 {
+                margin-right: 0; /* FIX: Remove offset on medium screens */
             }
         }
         
