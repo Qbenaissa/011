@@ -1,4 +1,4 @@
-<!DOCTYPE html>a
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -168,7 +168,7 @@
         
         .hero {
             min-height: 100vh;
-            background: url('a.png') no-repeat center center;
+            background: url('https://placehold.co/1920x1080/1a1a1a/ffffff?text=Hero+Image') no-repeat center center;
             background-size: cover;
             position: relative;
             overflow: hidden;
@@ -258,7 +258,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
         .about-text h3 { font-size: 2rem; margin-bottom: 20px; }
-        .about-text p { margin-bottom: 20px; color: #6C757D; }
+        .about-text p { margin-bottom: 20px; color: #adb5bd; }
         .about-info { margin-top: 30px; }
         .info-item span {
             font-weight: 600;
@@ -299,7 +299,7 @@
             color: #fff;
         }
         .service-item h4 { font-size: 1.3rem; margin-bottom: 15px; }
-        .service-item p { color: #6C757D; }
+        .service-item p { color: #adb5bd; }
         
         .portfolio { background-color: var(--darker-color); }
         .portfolio-filter { margin-bottom: 40px; text-align: center; }
@@ -399,7 +399,8 @@
             margin-bottom: 10px;
         }
         .resume-title { font-size: 1.3rem; margin-bottom: 5px; }
-        .resume-company { color: #6C757D; font-style: italic; }
+        .resume-company { color: #adb5bd; font-style: italic; }
+        .resume-item p {color: #adb5bd; }
         
         .skills { background-color: var(--darker-color); }
         .skill-item { margin-bottom: 30px; }
@@ -438,8 +439,8 @@
             border: 2px solid var(--primary-color);
         }
         .testimonial-img img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
-        .testimonial-text { font-style: italic; color: #6C757D; margin-bottom: 20px; }
-        .testimonial-text i { color: var(--primary-color); font-size: 1.5rem; margin-bottom: 15px; }
+        .testimonial-text { font-style: italic; color: #adb5bd; margin-bottom: 20px; }
+        .testimonial-text i { color: var(--primary-color); font-size: 1.5rem; margin-bottom: 15px; display: block;}
         .testimonial-author h4 { font-size: 1.1rem; margin-bottom: 5px; }
         .testimonial-author p { color: var(--primary-color); font-size: 0.9rem; }
         
@@ -468,7 +469,7 @@
         }
         .contact-info-item:hover .contact-info-icon { background-color: var(--primary-color); color: #fff; }
         .contact-info-text h4 { font-size: 1.2rem; margin-bottom: 10px; }
-        .contact-info-text p { color: #6C757D; }
+        .contact-info-text p { color: #adb5bd; }
         
         .contact-form { margin-top: 30px; }
         .form-group { margin-bottom: 20px; }
@@ -482,11 +483,11 @@
             transition: all 0.3s ease;
         }
         .form-control:focus { box-shadow: none; background-color: rgba(255, 255, 255, 0.1); }
-        .form-control::placeholder { color: #6C757D; }
+        .form-control::placeholder { color: #adb5bd; }
         textarea.form-control { height: 160px; resize: none; padding: 20px; }
         
         .footer { background-color: var(--darker-color); padding: 30px 0; text-align: center; }
-        .footer p { margin-bottom: 0; color: #6C757D; }
+        .footer p { margin-bottom: 0; color: #adb5bd; }
         .footer a { color: var(--primary-color); transition: all 0.3s ease; }
         .footer a:hover { color: var(--secondary-color); }
 
@@ -647,11 +648,10 @@
     </style>
 </head>
 <body>
-    <div id="preloader">
-        <div class="loader"></div>
+    <div id="preloader" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: #0A0A0A; z-index: 99999; display: flex; align-items: center; justify-content: center;">
+        <div class="loader" style="border: 5px solid #f3f3f3; border-top: 5px solid var(--primary-color); border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite;"></div>
     </div>
     
-    <!-- Step 10: Accessibility - Changed from a div to a semantic button -->
     <button class="scroll-to-top" aria-label="العودة للأعلى" title="العودة للأعلى">
         <i class="fas fa-arrow-up"></i>
     </button>
@@ -702,18 +702,18 @@
         </div>
     </section>
     
-    <!-- The rest of the page content remains the same -->
     <section id="about" class="about">
         <div class="container">
             <div class="row">
                 <div class="col-12"><div class="section-title text-center" data-aos="fade-up"><h2>تعرّف علي</h2><p>تعرف عليّ بشكل أفضل</p></div></div>
             </div>
             <div class="row align-items-center">
-                <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000"><div class="about-image"><img src="a1.png" alt="تعرّف علي" class="img-fluid"></div></div>
+                <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000"><div class="about-image"><img src="https://placehold.co/500x550/8e44ad/ffffff?text=John+Anderson" alt="جون أندرسون" class="img-fluid" onerror="this.onerror=null;this.src='https://placehold.co/500x550/cccccc/ffffff?text=Image+Not+Found';"></div></div>
                 <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000"><div class="about-text"><h3>أنا مصمم ومطور شغوف</h3><p>أنا مصمم UI/UX ومطور واجهات أمامية بخبرة تزيد عن 5 سنوات. أنا متخصص في إنشاء تجارب مستخدم بديهية وجذابة تساعد الشركات على التواصل مع عملائها.</p><p>يجمع نهجي بين مبادئ التصميم الجمالي ومنهجيات تتمحور حول المستخدم لتقديم منتجات ليست جذابة بصريًا فحسب، بل أيضًا وظيفية للغاية وسهلة الاستخدام. أنا أؤمن بقوة التصميم المدروس لحل المشكلات الحقيقية.</p><div class="about-info"><div class="row"><div class="col-md-6"><div class="info-item"><span>الاسم:</span> جون أندرسون</div><div class="info-item"><span>البريد الإلكتروني:</span> john@example.com</div><div class="info-item"><span>الهاتف:</span> +1 234 567 8900</div></div><div class="col-md-6"><div class="info-item"><span>العمر:</span> 28</div><div class="info-item"><span>من:</span> نيويورك، الولايات المتحدة الأمريكية</div><div class="info-item"><span>عمل حر:</span> متاح</div></div></div></div><a href="#" class="btn btn-primary mt-4">تحميل السيرة الذاتية</a></div></div>
             </div>
         </div>
     </section>
+
     <section id="services" class="services">
         <div class="container">
             <div class="row"><div class="col-12"><div class="section-title text-center" data-aos="fade-up"><h2>خدماتي</h2><p>ما يمكنني فعله لك</p></div></div></div>
@@ -727,49 +727,113 @@
             </div>
         </div>
     </section>
+
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="row"><div class="col-12"><div class="section-title text-center" data-aos="fade-up"><h2>أعمالي</h2><p>أحدث أعمالي</p></div></div></div>
-            <div class="row"><div class="col-12"><ul class="portfolio-filter" data-aos="fade-up"><li><a href="#" class="active" data-filter="*">الكل</a></li><li><a href="#" data-filter=".web">تصميم الويب</a></li><li><a href="#" data-filter=".app">تصميم التطبيقات</a></li><li><a href="#" data-filter=".brand">العلامات التجارية</a></li><li><a href="#" data-filter=".photo">التصوير الفوتوغرافي</a></li></ul></div></div>
+            <div class="row"><div class="col-12"><ul class="portfolio-filter" data-aos="fade-up"><li><a href="#" class="active" data-filter="*">الكل</a></li><li><a href="#" data-filter=".web">تصميم الويب</a></li><li><a href="#" data-filter=".app">تصميم التطبيقات</a></li><li><a href="#" data-filter=".brand">العلامات التجارية</a></li></ul></div></div>
             <div class="row portfolio-container">
-                <div class="col-lg-4 col-md-6 portfolio-item web" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="100"><div class="portfolio-img"><img src="a1.png" alt="عنصر المحفظة 1"><div class="portfolio-overlay"><h4>مشروع تصميم ويب</h4><p>تصميم ويب، تطوير</p><a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a></div></div></div>
-                <div class="col-lg-4 col-md-6 portfolio-item app" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200"><div class="portfolio-img"><img src="a1.png" alt="عنصر المحفظة 2"><div class="portfolio-overlay"><h4>واجهة مستخدم تطبيق جوال</h4><p>تصميم تطبيقات، UI/UX</p><a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a></div></div></div>
-                <div class="col-lg-4 col-md-6 portfolio-item brand" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="300"><div class="portfolio-img"><img src="a1.png" alt="عنصر المحفظة 3"><div class="portfolio-overlay"><h4>هوية العلامة التجارية</h4><p>العلامات التجارية، تصميم شعار</p><a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a></div></div></div>
-                <div class="col-lg-4 col-md-6 portfolio-item photo" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="400"><div class="portfolio-img"><img src="a1.png" alt="عنصر المحفظة 4"><div class="portfolio-overlay"><h4>تصوير المنتجات</h4><p>تصوير فوتوغرافي</p><a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a></div></div></div>
-                <div class="col-lg-4 col-md-6 portfolio-item web" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="500"><div class="portfolio-img"><img src="a1.png" alt="عنصر المحفظة 5"><div class="portfolio-overlay"><h4>موقع تجارة إلكترونية</h4><p>تصميم ويب، تطوير</p><a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a></div></div></div>
-                <div class="col-lg-4 col-md-6 portfolio-item app" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="600"><div class="portfolio-img"><img src="a1.png" alt="عنصر المحفظة 6"><div class="portfolio-overlay"><h4>واجهة مستخدم تطبيق لياقة بدنية</h4><p>تصميم تطبيقات، UI/UX</p><a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a></div></div></div>
+                <div class="col-lg-4 col-md-6 portfolio-item web" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="100"><div class="portfolio-img"><img src="https://placehold.co/600x400/9b59b6/ffffff?text=Project+1" alt="عنصر المحفظة 1" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';"><div class="portfolio-overlay"><h4>مشروع تصميم ويب</h4><p>تصميم ويب، تطوير</p><a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a></div></div></div>
+                <div class="col-lg-4 col-md-6 portfolio-item app" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200"><div class="portfolio-img"><img src="https://placehold.co/600x400/8e44ad/ffffff?text=Project+2" alt="عنصر المحفظة 2" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';"><div class="portfolio-overlay"><h4>واجهة مستخدم تطبيق جوال</h4><p>تصميم تطبيقات، UI/UX</p><a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a></div></div></div>
+                <div class="col-lg-4 col-md-6 portfolio-item brand" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="300"><div class="portfolio-img"><img src="https://placehold.co/600x400/9b59b6/ffffff?text=Project+3" alt="عنصر المحفظة 3" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';"><div class="portfolio-overlay"><h4>هوية العلامة التجارية</h4><p>العلامات التجارية، تصميم شعار</p><a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a></div></div></div>
+                <div class="col-lg-4 col-md-6 portfolio-item web" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="400"><div class="portfolio-img"><img src="https://placehold.co/600x400/8e44ad/ffffff?text=Project+4" alt="عنصر المحفظة 4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';"><div class="portfolio-overlay"><h4>موقع تجارة إلكترونية</h4><p>تصميم ويب، تطوير</p><a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a></div></div></div>
+                <div class="col-lg-4 col-md-6 portfolio-item app" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="500"><div class="portfolio-img"><img src="https://placehold.co/600x400/9b59b6/ffffff?text=Project+5" alt="عنصر المحفظة 5" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';"><div class="portfolio-overlay"><h4>واجهة مستخدم تطبيق لياقة بدنية</h4><p>تصميم تطبيقات، UI/UX</p><a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a></div></div></div>
+                <div class="col-lg-4 col-md-6 portfolio-item brand" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="600"><div class="portfolio-img"><img src="https://placehold.co/600x400/8e44ad/ffffff?text=Project+6" alt="عنصر المحفظة 6" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';"><div class="portfolio-overlay"><h4>هوية علامة تجارية جديدة</h4><p>العلامات التجارية</p><a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a></div></div></div>
             </div>
         </div>
     </section>
+
     <section id="resume" class="resume">
         <div class="container">
             <div class="row"><div class="col-12"><div class="section-title text-center" data-aos="fade-up"><h2>سيرتي الذاتية</h2><p>التعليم والخبرة</p></div></div></div>
             <div class="row">
-                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000"><h3 class="mb-4">التعليم</h3><div class="resume-item"><div class="resume-header"><span class="resume-year">2015 - 2017</span><h4 class="resume-title">درجة الماجستير في تصميم UI/UX</h4><p class="resume-company">جامعة نيويورك</p></div><p>أكملت درجة الماجستير بامتياز...</p></div></div>
-                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000"><h3 class="mb-4">الخبرة</h3><div class="resume-item"><div class="resume-header"><span class="resume-year">2020 - حالي</span><h4 class="resume-title">مصمم UI/UX أول</h4><p class="resume-company">شركة حلول إبداعية</p></div><p>أقود فريق التصميم في إنشاء واجهات المستخدم...</p></div></div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                    <h3 class="mb-4">التعليم</h3>
+                    <div class="resume-item">
+                        <div class="resume-header"><span class="resume-year">2015 - 2017</span><h4 class="resume-title">درجة الماجستير في تصميم UI/UX</h4><p class="resume-company">جامعة نيويورك</p></div>
+                        <p>أكملت درجة الماجستير بامتياز، مع التركيز على تصميم تجربة المستخدم ومنهجيات البحث.</p>
+                    </div>
+                     <div class="resume-item">
+                        <div class="resume-header"><span class="resume-year">2011 - 2015</span><h4 class="resume-title">بكالوريوس في التصميم الجرافيكي</h4><p class="resume-company">معهد كاليفورنيا للفنون</p></div>
+                        <p>تخصصت في الوسائط الرقمية والتصميم التفاعلي، وتخرجت بمرتبة الشرف.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <h3 class="mb-4">الخبرة المهنية</h3>
+                    <div class="resume-item">
+                        <div class="resume-header"><span class="resume-year">2020 - حالي</span><h4 class="resume-title">مصمم UI/UX أول</h4><p class="resume-company">شركة حلول إبداعية</p></div>
+                        <p>أقود فريق التصميم في إنشاء واجهات المستخدم لتطبيقات الويب والجوال. أتعاون مع المطورين ومديري المنتجات لضمان التنفيذ السلس للتصاميم.</p>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-header"><span class="resume-year">2017 - 2020</span><h4 class="resume-title">مصمم UI/UX</h4><p class="resume-company">ابتكارات رقمية</p></div>
+                        <p>صممت واجهات المستخدم لعملاء مختلفين عبر صناعات متعددة. أجريت أبحاث المستخدم واختبارات قابلية الاستخدام لتحسين تجارب المنتج.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
     <section id="skills" class="skills">
         <div class="container">
             <div class="row"><div class="col-12"><div class="section-title text-center" data-aos="fade-up"><h2>مهاراتي</h2><p>ما أجيده</p></div></div></div>
             <div class="row">
-                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000"><div class="skill-item"><div class="skill-info"><span class="skill-name">HTML/CSS</span><span class="skill-percent">95%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div></div></div>
-                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000"><div class="skill-item"><div class="skill-info"><span class="skill-name">تصميم UI/UX</span><span class="skill-percent">95%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div></div></div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="skill-item"><div class="skill-info"><span class="skill-name">HTML & CSS</span><span class="skill-percent">95%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div></div>
+                    <div class="skill-item"><div class="skill-info"><span class="skill-name">JavaScript</span><span class="skill-percent">85%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div></div>
+                    <div class="skill-item"><div class="skill-info"><span class="skill-name">React</span><span class="skill-percent">80%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div></div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="skill-item"><div class="skill-info"><span class="skill-name">تصميم UI/UX</span><span class="skill-percent">95%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div></div>
+                    <div class="skill-item"><div class="skill-info"><span class="skill-name">Figma</span><span class="skill-percent">90%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div></div>
+                    <div class="skill-item"><div class="skill-info"><span class="skill-name">Adobe XD</span><span class="skill-percent">88%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div></div>
+                </div>
             </div>
         </div>
     </section>
+
     <section id="testimonials" class="testimonials">
         <div class="container">
             <div class="row"><div class="col-12"><div class="section-title text-center" data-aos="fade-up"><h2>الشهادات</h2><p>ما يقوله العملاء</p></div></div></div>
-            <div class="row"><div class="col-12" data-aos="fade-up" data-aos-duration="1000"><div class="owl-carousel testimonial-carousel"><div class="testimonial-item"><div class="testimonial-img"><img src="a1.png" alt="العميل 1"></div><div class="testimonial-text"><i class="fas fa-quote-left"></i><p>جون مصمم استثنائي...</p></div></div></div></div></div>
+            <div class="row"><div class="col-12" data-aos="fade-up" data-aos-duration="1000"><div class="owl-carousel testimonial-carousel">
+                <div class="testimonial-item">
+                    <div class="testimonial-img"><img src="https://placehold.co/100x100/cccccc/333333?text=SA" alt="العميل 1" onerror="this.onerror=null;this.src='https://placehold.co/100x100/cccccc/ffffff?text=Image+Not+Found';"></div>
+                    <div class="testimonial-text"><i class="fas fa-quote-left"></i><p>جون مصمم استثنائي يفهم حقًا احتياجات المستخدم. لقد أنشأ موقعًا إلكترونيًا لعملنا لا يبدو جميلًا فحسب، بل يعمل أيضًا بشكل جيد للغاية. موصى به للغاية!</p></div>
+                    <div class="testimonial-author"><h4>سارة جونسون</h4><p>الرئيس التنفيذي، تيك ستارت</p></div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-img"><img src="https://placehold.co/100x100/cccccc/333333?text=MB" alt="العميل 2" onerror="this.onerror=null;this.src='https://placehold.co/100x100/cccccc/ffffff?text=Image+Not+Found';"></div>
+                    <div class="testimonial-text"><i class="fas fa-quote-left"></i><p>كان العمل مع جون متعة من البداية إلى النهاية. لقد أخذ أفكارنا الغامضة وحولها إلى موقع ويب مذهل يمثل علامتنا التجارية بشكل مثالي. اهتمامه بالتفاصيل مثير للإعجاب.</p></div>
+                    <div class="testimonial-author"><h4>مايكل براون</h4><p>مدير التسويق، إنوفيت إنك.</p></div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-img"><img src="https://placehold.co/100x100/cccccc/333333?text=EW" alt="العميل 3" onerror="this.onerror=null;this.src='https://placehold.co/100x100/cccccc/ffffff?text=Image+Not+Found';"></div>
+                    <div class="testimonial-text"><i class="fas fa-quote-left"></i><p>أعاد جون تصميم موقع التجارة الإلكترونية الخاص بنا، وزادت معدلات التحويل لدينا بنسبة 40% خلال الشهر الأول. فهمه لسلوك المستخدم وتحسين التحويل رائع حقًا.</p></div>
+                    <div class="testimonial-author"><h4>إميلي ويلسون</h4><p>مالكة، بوتيك الأزياء</p></div>
+                </div>
+            </div></div></div>
         </div>
     </section>
+
     <section id="contact" class="contact">
         <div class="container">
             <div class="row"><div class="col-12"><div class="section-title text-center" data-aos="fade-up"><h2>اتصل بي</h2><p>تواصل معي</p></div></div></div>
-            <div class="row"><div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><div class="contact-info-item"><div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div><div class="contact-info-text"><h4>الموقع</h4><p>123 برودواي، نيويورك...</p></div></div></div></div>
-            <div class="row"><div class="col-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><form class="contact-form"><div class="row"><div class="col-md-6"><div class="form-group"><input type="text" class="form-control" name="name" placeholder="اسمك" required></div></div><div class="col-12"><button type="submit" class="btn btn-primary">إرسال الرسالة</button></div></div><div id="contactMessage" class="mt-3"></div></form></div></div>
+            <div class="row">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><div class="contact-info-item"><div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div><div class="contact-info-text"><h4>الموقع</h4><p>123 برودواي، نيويورك، 10001</p></div></div></div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><div class="contact-info-item"><div class="contact-info-icon"><i class="fas fa-envelope"></i></div><div class="contact-info-text"><h4>البريد الإلكتروني</h4><p>contact@johnanderson.dev</p></div></div></div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><div class="contact-info-item"><div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div><div class="contact-info-text"><h4>الهاتف</h4><p>+1 234 567 8900</p></div></div></div>
+            </div>
+            <div class="row"><div class="col-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <form class="contact-form">
+                    <div class="row">
+                        <div class="col-md-6"><div class="form-group"><input type="text" class="form-control" name="name" placeholder="اسمك" required></div></div>
+                        <div class="col-md-6"><div class="form-group"><input type="email" class="form-control" name="email" placeholder="بريدك الإلكتروني" required></div></div>
+                        <div class="col-12"><div class="form-group"><input type="text" class="form-control" name="subject" placeholder="الموضوع" required></div></div>
+                        <div class="col-12"><div class="form-group"><textarea class="form-control" name="message" placeholder="رسالتك" required rows="5"></textarea></div></div>
+                        <div class="col-12 text-center"><button type="submit" class="btn btn-primary">إرسال الرسالة</button></div>
+                    </div>
+                    <div id="contactMessage"></div>
+                </form>
+            </div></div>
         </div>
     </section>
     
@@ -785,7 +849,7 @@
 
     <div class="modal fade portfolio-modal" id="portfolioModal" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="portfolioModalLabel"></h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><img id="modalPortfolioImage" src="" alt="Portfolio Image" class="img-fluid"></div></div>
+            <div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="portfolioModalLabel">تفاصيل المشروع</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><img id="modalPortfolioImage" src="" alt="Portfolio Image" class="img-fluid"></div></div>
         </div>
     </div>
     
@@ -811,7 +875,6 @@
             // START: Scroll-to-Top JavaScript Fixes
             // ========================================
             
-            // Step 5 & 9: Throttling function to improve performance
             function throttle(func, limit) {
                 let inThrottle;
                 return function() {
@@ -827,16 +890,13 @@
 
             const scrollToTopBtn = $('.scroll-to-top');
 
-            // Throttled scroll event handler
             const handleScroll = () => {
-                // Navbar sticky logic
                 if ($(window).scrollTop() > 50) {
                     $('.navbar').addClass('sticky');
                 } else {
                     $('.navbar').removeClass('sticky');
                 }
 
-                // Step 5: Scroll-to-top button visibility logic (trigger at 200px)
                 if ($(window).scrollTop() > 200) {
                     scrollToTopBtn.addClass('show');
                 } else {
@@ -844,19 +904,15 @@
                 }
             };
             
-            // Attach the throttled listener
             $(window).on('scroll', throttle(handleScroll, 200));
 
-            // Click handler for the scroll-to-top button
             scrollToTopBtn.on('click', function() {
                 const btn = $(this);
-                // Step 4: Add '.clicked' class for press animation
                 btn.addClass('clicked'); 
 
                 $('html, body').animate({
                     scrollTop: 0
                 }, 800, 'swing', function() {
-                    // Remove class after animation is complete
                     btn.removeClass('clicked');
                 });
                 return false;
@@ -866,36 +922,30 @@
             // END: Scroll-to-Top JavaScript Fixes
             // ========================================
 
-            // Smooth scrolling for navigation links
             $('a.nav-link').on('click', function(e) {
                 if (this.hash !== '') {
                     e.preventDefault();
                     const hash = this.hash;
+                    // Close the navbar collapse if it's open on mobile
+                    if ($('.navbar-collapse').hasClass('show')) {
+                        $('.navbar-collapse').collapse('hide');
+                    }
                     $('html, body').animate({
-                        scrollTop: $(hash).offset().top - 80
+                        scrollTop: $(hash).offset().top - 70
                     }, 800);
                 }
             });
             
-            // Update active nav link on scroll
             $(window).scroll(function() {
                 var scrollDistance = $(window).scrollTop() + 100;
-                $('.navbar-nav .nav-link').each(function() {
-                    var link = $(this);
-                    var targetId = link.attr('href');
-                    if (targetId.startsWith('#') && $(targetId).length) {
-                        var targetSection = $(targetId);
-                        if (targetSection.offset().top <= scrollDistance && 
-                            (targetSection.offset().top + targetSection.outerHeight()) > scrollDistance) {
-                            $('.navbar-nav .nav-link').removeClass('active');
-                            link.addClass('active');
-                            return false; 
-                        }
+                $('section').each(function() {
+                     if ($(this).position().top <= scrollDistance) {
+                        $('.navbar-nav .nav-link.active').removeClass('active');
+                        $('.navbar-nav .nav-link').eq($(this).index('section')).addClass('active');
                     }
                 });
-            });
+            }).scroll();
             
-            // Testimonial Carousel
             $('.testimonial-carousel').owlCarousel({
                 loop: true,
                 margin: 30,
@@ -906,12 +956,11 @@
                 rtl: true,
                 responsive: {
                     0: { items: 1 },
-                    768: { items: 2 },
-                    992: { items: 3 }
+                    768: { items: 1 },
+                    992: { items: 2 }
                 }
             });
             
-            // Portfolio isotope and filter
             var portfolioIsotope = $('.portfolio-container').isotope({
                 itemSelector: '.portfolio-item',
                 layoutMode: 'fitRows',
@@ -925,17 +974,19 @@
                 return false;
             });
 
-            // Portfolio image modal
             $('.view-portfolio-item').on('click', function() {
-                const imageUrl = $(this).closest('.portfolio-item').find('.portfolio-img img').attr('src');
+                const item = $(this).closest('.portfolio-item');
+                const imageUrl = item.find('.portfolio-img img').attr('src');
+                const title = item.find('.portfolio-overlay h4').text();
                 $('#modalPortfolioImage').attr('src', imageUrl);
+                $('#portfolioModalLabel').text(title);
             });
             
-            // Contact form submission
             $('.contact-form').on('submit', function(e) {
                 e.preventDefault(); 
                 const contactMessage = $('#contactMessage');
                 contactMessage.removeClass('success error').hide();
+                // Simulate form submission
                 setTimeout(function() {
                     contactMessage.addClass('success').text('تم إرسال رسالتك بنجاح! (هذه محاكاة)').show();
                     $('.contact-form')[0].reset();
