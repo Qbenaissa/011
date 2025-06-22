@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE html>a
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سيلفر - محفظة شخصية (محسّن)</title>
+    <title>سيلفر - محفظة شخصية (نسخة معدلة)</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -22,6 +22,12 @@
             --gray-color: #eeeeee;
         }
         
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         html, body {
             overflow-x: hidden;
             max-width: 100%;
@@ -94,7 +100,6 @@
             background-color: var(--primary-color);
         }
         
-        /* Header / Navbar */
         .navbar {
             padding: 20px 0;
             transition: all 0.3s ease;
@@ -161,10 +166,9 @@
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
         
-        /* Hero Section */
         .hero {
             min-height: 100vh;
-            background: url('https://placehold.co/1920x1080/121212/ffffff?text=Hero+Image') no-repeat center center;
+            background: url('a.png') no-repeat center center;
             background-size: cover;
             position: relative;
             overflow: hidden;
@@ -225,177 +229,410 @@
             transform: translateY(-3px);
         }
         
-        /* All other sections styled as before... */
-        .about, .services, .portfolio, .resume, .skills, .testimonials, .contact, .footer {
-            /* Styles remain the same as the original file */
-        }
-        
-        /* --- START: SCROLL-TO-TOP BUTTON FIXES (Steps 1-10) --- */
-
-        .scroll-to-top-btn {
-            /* Step 1 & 7: Positioning & Sizing */
-            position: fixed;
-            bottom: 30px;
-            left: 30px; /* RTL fix */
-            right: auto;
-            width: 50px; /* Enhanced touch target */
-            height: 50px;
-            
-            /* Step 2: Visual Design Improvements */
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            box-shadow: 0 4px 20px rgba(142, 68, 173, 0.3); /* Enhanced shadow */
-            
-            /* Step 10: Accessibility (Color Contrast) */
-            color: #fff; 
-            
-            /* General Styles */
+        .hero-shape {
+            position: absolute;
+            width: 600px;
+            height: 600px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            cursor: pointer;
-            
-            /* Step 8: Z-Index & Layering */
-            z-index: 9999 !important; 
-            
-            /* Step 3 & 4: Animation & State Management */
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(100px); /* Start off-screen */
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Premium easing */
-        }
-
-        .scroll-to-top-btn.show {
-            /* 'show' class for visibility */
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0); /* Animate into view */
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            opacity: 0.05;
+            z-index: 1;
+            animation: float 8s ease-in-out infinite;
         }
         
-        /* Step 6: Hover & Interactive States */
-        .scroll-to-top-btn:hover,
-        .scroll-to-top-btn:focus {
-            outline: none;
-            transform: translateY(-5px); /* Lift on hover/focus */
-            box-shadow: 0 8px 25px rgba(142, 68, 173, 0.4);
-        }
-
-        /* Step 4: Click animation state */
-        .scroll-to-top-btn.clicked {
-            transform: scale(0.9);
-            box-shadow: 0 2px 10px rgba(142, 68, 173, 0.2);
-            transition-duration: 0.1s;
+        .shape2 {
+            bottom: -300px;
+            right: -200px; 
+            left: auto;
         }
         
-        /* Step 7: Mobile Responsiveness */
-        @media (max-width: 991px) { /* Tablet */
-            .scroll-to-top-btn {
-                width: 45px;
-                height: 45px;
-                font-size: 1.2rem;
-            }
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0) rotate(0deg); }
         }
-
-        @media (max-width: 767px) { /* Mobile */
-            .scroll-to-top-btn {
-                width: 40px;
-                height: 40px;
-                font-size: 1.1rem;
-                bottom: 20px;
-                left: 20px;
-            }
-        }
-        /* --- END: SCROLL-TO-TOP BUTTON FIXES --- */
-
-        /* All other styles are copied from the original file for brevity */
+        
         .about { background-color: var(--darker-color); }
-        .about-image img { border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
+        .about-image img {
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
         .about-text h3 { font-size: 2rem; margin-bottom: 20px; }
         .about-text p { margin-bottom: 20px; color: #6C757D; }
         .about-info { margin-top: 30px; }
-        .info-item span { font-weight: 600; margin-left: 10px; margin-right: 0; color: var(--primary-color); }
+        .info-item span {
+            font-weight: 600;
+            margin-left: 10px; 
+            margin-right: 0;
+            color: var(--primary-color);
+        }
+        
         .services { background-color: var(--dark-color); }
-        .service-item { background-color: var(--darker-color); padding: 30px; border-radius: 15px; text-align: center; margin-bottom: 30px; transition: all 0.3s ease; height: 100%; }
-        .service-item:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
-        .service-icon { width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; background-color: rgba(142, 68, 173, 0.1); color: var(--primary-color); font-size: 1.8rem; border-radius: 50%; margin: 0 auto 20px; transition: all 0.3s ease; }
-        .service-item:hover .service-icon { background-color: var(--primary-color); color: #fff; }
+        .service-item {
+            background-color: var(--darker-color);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(142, 68, 173, 0.1);
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            transition: all 0.3s ease;
+        }
+        .service-item:hover .service-icon {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
         .service-item h4 { font-size: 1.3rem; margin-bottom: 15px; }
         .service-item p { color: #6C757D; }
+        
         .portfolio { background-color: var(--darker-color); }
         .portfolio-filter { margin-bottom: 40px; text-align: center; }
         .portfolio-filter li { display: inline-block; margin: 0 5px; }
-        .portfolio-filter li a { display: inline-block; padding: 8px 20px; background-color: rgba(255, 255, 255, 0.05); color: #fff; border-radius: 30px; font-weight: 500; transition: all 0.3s ease; text-decoration: none; }
-        .portfolio-filter li a.active, .portfolio-filter li a:hover { background-color: var(--primary-color); }
-        .portfolio-item { margin-bottom: 30px; position: relative; overflow: hidden; border-radius: 15px; cursor: pointer; }
-        .portfolio-img { position: relative; overflow: hidden; border-radius: 15px; }
+        .portfolio-filter li a {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .portfolio-filter li a.active,
+        .portfolio-filter li a:hover { background-color: var(--primary-color); }
+        .portfolio-item {
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .portfolio-img {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+        }
         .portfolio-img img { width: 100%; transition: all 0.5s ease; }
-        .portfolio-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(142, 68, 173, 0.9); display: flex; align-items: center; justify-content: center; flex-direction: column; opacity: 0; transition: all 0.3s ease; }
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(142, 68, 173, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
         .portfolio-item:hover .portfolio-overlay { opacity: 1; }
         .portfolio-item:hover .portfolio-img img { transform: scale(1.1); }
-        .portfolio-overlay h4 { font-size: 1.3rem; margin-bottom: 10px; transform: translateY(-20px); transition: all 0.4s ease; opacity: 0; }
-        .portfolio-overlay p { color: rgba(255, 255, 255, 0.8); margin-bottom: 15px; transform: translateY(20px); transition: all 0.4s ease; opacity: 0; }
+        .portfolio-overlay h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            transform: translateY(-20px);
+            transition: all 0.4s ease;
+            opacity: 0;
+        }
+        .portfolio-overlay p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 15px;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+            opacity: 0;
+        }
         .portfolio-overlay .btn { transform: scale(0); transition: all 0.4s ease; }
-        .portfolio-item:hover .portfolio-overlay h4, .portfolio-item:hover .portfolio-overlay p { transform: translateY(0); opacity: 1; }
+        .portfolio-item:hover .portfolio-overlay h4,
+        .portfolio-item:hover .portfolio-overlay p {
+            transform: translateY(0);
+            opacity: 1;
+        }
         .portfolio-item:hover .portfolio-overlay .btn { transform: scale(1); }
+        
         .resume { background-color: var(--dark-color); }
-        .resume-item { background-color: var(--darker-color); padding: 30px; border-radius: 15px; margin-bottom: 30px; position: relative; z-index: 1; overflow: hidden; }
-        .resume-item::before { content: ""; position: absolute; top: 0; right: 0; left: auto; width: 3px; height: 100%; background-color: var(--primary-color); z-index: -1; }
+        .resume-item {
+            background-color: var(--darker-color);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .resume-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0; 
+            left: auto;
+            width: 3px;
+            height: 100%;
+            background-color: var(--primary-color);
+            z-index: -1;
+        }
         .resume-header { margin-bottom: 15px; }
-        .resume-year { display: inline-block; padding: 5px 15px; background-color: rgba(142, 68, 173, 0.1); color: var(--primary-color); border-radius: 30px; font-size: 0.8rem; margin-bottom: 10px; }
+        .resume-year {
+            display: inline-block;
+            padding: 5px 15px;
+            background-color: rgba(142, 68, 173, 0.1);
+            color: var(--primary-color);
+            border-radius: 30px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
         .resume-title { font-size: 1.3rem; margin-bottom: 5px; }
         .resume-company { color: #6C757D; font-style: italic; }
+        
         .skills { background-color: var(--darker-color); }
         .skill-item { margin-bottom: 30px; }
         .skill-info { display: flex; justify-content: space-between; margin-bottom: 10px; }
         .skill-name { font-weight: 600; }
         .skill-percent { color: var(--primary-color); }
         .skill-bar { height: 8px; background-color: rgba(255, 255, 255, 0.1); border-radius: 10px; overflow: hidden; }
-        .skill-progress { height: 100%; border-radius: 10px; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); position: relative; animation: skillProgress 1.5s ease-in-out; }
+        .skill-progress {
+            height: 100%;
+            border-radius: 10px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            position: relative;
+            animation: skillProgress 1.5s ease-in-out;
+        }
         @keyframes skillProgress { from { width: 0; } }
+        
         .testimonials { background-color: var(--dark-color); }
-        .testimonial-item { background-color: var(--darker-color); padding: 30px; border-radius: 15px; text-align: center; margin: 10px; transition: all 0.3s ease; }
-        .testimonial-item:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
-        .testimonial-img { width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 20px; padding: 5px; border: 2px solid var(--primary-color); }
+        .testimonial-item {
+            background-color: var(--darker-color);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        .testimonial-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .testimonial-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            padding: 5px;
+            border: 2px solid var(--primary-color);
+        }
         .testimonial-img img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
         .testimonial-text { font-style: italic; color: #6C757D; margin-bottom: 20px; }
         .testimonial-text i { color: var(--primary-color); font-size: 1.5rem; margin-bottom: 15px; }
         .testimonial-author h4 { font-size: 1.1rem; margin-bottom: 5px; }
         .testimonial-author p { color: var(--primary-color); font-size: 0.9rem; }
+        
         .contact { background-color: var(--darker-color); }
-        .contact-info-item { background-color: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 30px; text-align: center; margin-bottom: 30px; transition: all 0.3s ease; }
+        .contact-info-item {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
         .contact-info-item:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); }
-        .contact-info-icon { width: 60px; height: 60px; background-color: rgba(142, 68, 173, 0.1); color: var(--primary-color); font-size: 1.5rem; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
+        .contact-info-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(142, 68, 173, 0.1);
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
         .contact-info-item:hover .contact-info-icon { background-color: var(--primary-color); color: #fff; }
         .contact-info-text h4 { font-size: 1.2rem; margin-bottom: 10px; }
         .contact-info-text p { color: #6C757D; }
+        
         .contact-form { margin-top: 30px; }
         .form-group { margin-bottom: 20px; }
-        .form-control { height: 50px; background-color: rgba(255, 255, 255, 0.05); border: none; border-radius: 10px; padding: 10px 20px; color: #fff; transition: all 0.3s ease; }
+        .form-control {
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
         .form-control:focus { box-shadow: none; background-color: rgba(255, 255, 255, 0.1); }
         .form-control::placeholder { color: #6C757D; }
         textarea.form-control { height: 160px; resize: none; padding: 20px; }
+        
         .footer { background-color: var(--darker-color); padding: 30px 0; text-align: center; }
         .footer p { margin-bottom: 0; color: #6C757D; }
         .footer a { color: var(--primary-color); transition: all 0.3s ease; }
         .footer a:hover { color: var(--secondary-color); }
-        .portfolio-modal .modal-content { background-color: var(--darker-color); border-radius: 15px; border: none; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
+
+        /*
+        ========================================
+        START: Scroll-to-Top Button Fixes
+        ========================================
+        */
+
+        .scroll-to-top {
+            /* Step 1 & 7: Positioning & Responsive Sizing */
+            position: fixed;
+            bottom: 30px;
+            left: 30px; /* RTL Positioning */
+            right: auto;
+            width: 50px; /* Desktop Size */
+            height: 50px; /* Desktop Size */
+
+            /* Step 2: Visual Design Improvements */
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            box-shadow: 0 4px 20px rgba(142, 68, 173, 0.3);
+            
+            /* Step 8: Z-Index & Layering */
+            z-index: 9999 !important; /* Ensure it's on top */
+            
+            /* General Styles */
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            cursor: pointer;
+
+            /* Step 3: Animation & Transition Fixes */
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                        box-shadow 0.3s ease;
+        }
+
+        /* Step 4: State Management (.show class) */
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Step 6: Hover, Active & Focus States */
+        .scroll-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(142, 68, 173, 0.4);
+        }
+
+        /* Step 4: Clicked state for press animation */
+        .scroll-to-top:active,
+        .scroll-to-top.clicked {
+            transform: scale(0.9);
+            box-shadow: 0 2px 10px rgba(142, 68, 173, 0.2);
+        }
+
+        /* Step 10: Accessibility Improvements (Focus State) */
+        .scroll-to-top:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 4px;
+        }
+
+        /* Step 7: Mobile Responsiveness */
+        @media (max-width: 991px) { /* Tablet size */
+            .scroll-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 767px) { /* Mobile size */
+            .scroll-to-top {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+                bottom: 20px;
+                left: 20px;
+            }
+        }
+        /*
+        ========================================
+        END: Scroll-to-Top Button Fixes
+        ========================================
+        */
+        
+        .portfolio-modal .modal-content {
+            background-color: var(--darker-color);
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
         .portfolio-modal .modal-header { position: relative; border-bottom: none; padding: 15px; }
         .portfolio-modal .modal-title { color: #fff; }
-        .portfolio-modal .close { position: absolute; top: 15px; right: 15px; color: #fff; opacity: 1; font-size: 1.5rem; background-color: var(--primary-color); border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; z-index: 10; }
+        .portfolio-modal .close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #fff;
+            opacity: 1;
+            font-size: 1.5rem;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
         .portfolio-modal .close span { line-height: 1; }
         .portfolio-modal .modal-body { padding: 15px; text-align: center; }
         .portfolio-modal .modal-body img { max-width: 100%; height: auto; border-radius: 10px; display: block; margin: 0 auto; }
-        #contactMessage { margin-top: 20px; padding: 15px; border-radius: 10px; text-align: center; font-weight: 500; display: none; }
+
+        #contactMessage {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            display: none;
+        }
         #contactMessage.success { background-color: #28a745; color: #fff; }
         #contactMessage.error { background-color: #dc3545; color: #fff; }
+        
         @media (max-width: 991px) {
-            .navbar-nav { background-color: rgba(10, 10, 10, 0.95); padding: 20px; border-radius: 10px; text-align: center; }
+            .navbar-nav {
+                background-color: rgba(10, 10, 10, 0.95);
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
+            }
             .navbar-nav .nav-item { margin: 10px 0; }
             .hero-content { justify-content: center !important; }
             .hero-text h1 { font-size: 2.8rem; }
             .hero-text p { font-size: 1rem; }
         }
+        
         @media (max-width: 767px) {
             section { padding: 80px 15px; }
             .section-title h2 { font-size: 2.2rem; }
@@ -407,18 +644,18 @@
             .hero-buttons .btn { width: 90%; max-width: 320px; margin: 0 !important; }
             .social-icons { justify-content: center; }
         }
-
     </style>
 </head>
 <body>
-    <!-- The preloader HTML can be added here if needed -->
-    
-    <!-- Step 10: Accessibility attributes added -->
-    <div class="scroll-to-top-btn" role="button" aria-label="Scroll to Top" title="Scroll to Top">
-        <i class="fas fa-arrow-up"></i>
+    <div id="preloader">
+        <div class="loader"></div>
     </div>
     
-    <!-- Header and all page sections -->
+    <!-- Step 10: Accessibility - Changed from a div to a semantic button -->
+    <button class="scroll-to-top" aria-label="العودة للأعلى" title="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
     <header class="header">
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
@@ -441,16 +678,116 @@
         </nav>
     </header>
     
-    <!-- All sections are copied from the original for brevity. I'm using placeholder images. -->
-    <section id="home" class="hero"><div class="container"><div class="row align-items-center justify-content-lg-end hero-content"><div class="col-lg-7 col-md-10"><div class="hero-text" data-aos="fade-left" data-aos-duration="1000"><h5>مرحباً، أنا</h5><h1>جون أندرسون</h1><p>مصمم UI/UX ومطور واجهات أمامية متحمس مقيم في نيويورك، متخصص في إنشاء تجارب مستخدم جميلة وعملية.</p></div></div></div></div></section>
-    <section id="about" class="about"><div class="container"><div class="row align-items-center"><div class="col-lg-5"><div class="about-image"><img src="https://placehold.co/600x750/9B59B6/ffffff?text=About+Me" alt="About Me" class="img-fluid"></div></div><div class="col-lg-7"><div class="about-text"><h3>أنا مصمم ومطور شغوف</h3><p>أنا مصمم UI/UX ومطور واجهات أمامية بخبرة تزيد عن 5 سنوات.</p></div></div></div></div></section>
-    <section id="services" class="services"><div class="container">Services Section</div></section>
-    <section id="portfolio" class="portfolio"><div class="container">Portfolio Section</div></section>
-    <section id="resume" class="resume"><div class="container">Resume Section</div></section>
-    <section id="testimonials" class="testimonials"><div class="container">Testimonials Section</div></section>
-    <section id="contact" class="contact"><div class="container">Contact Section</div></section>
-    <footer class="footer"><div class="container"><p>&copy; 2025 سيلفر. جميع الحقوق محفوظة.</p></div></footer>
+    <section id="home" class="hero">
+        <div class="hero-shape shape2"></div>
+        <div class="container">
+            <div class="row align-items-center justify-content-lg-end hero-content">
+                <div class="col-lg-7 col-md-10">
+                    <div class="hero-text" data-aos="fade-left" data-aos-duration="1000">
+                        <h5>مرحباً، أنا</h5>
+                        <h1>جون أندرسون</h1>
+                        <p>مصمم UI/UX ومطور واجهات أمامية متحمس مقيم في نيويورك، متخصص في إنشاء تجارب مستخدم جميلة وعملية.</p>
+                        <div class="hero-buttons">
+                            <a href="#portfolio" class="btn btn-primary ml-3">مشاهدة أعمالي</a>
+                            <a href="#contact" class="btn btn-outline-primary">اتصل بي</a>
+                        </div>
+                        <div class="social-icons">
+                            <a href="mailto:john@example.com"><i class="fas fa-envelope"></i></a>
+                            <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.researchgate.net/profile/yourprofile" target="_blank"><i class="fab fa-researchgate"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- The rest of the page content remains the same -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-12"><div class="section-title text-center" data-aos="fade-up"><h2>تعرّف علي</h2><p>تعرف عليّ بشكل أفضل</p></div></div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000"><div class="about-image"><img src="a1.png" alt="تعرّف علي" class="img-fluid"></div></div>
+                <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000"><div class="about-text"><h3>أنا مصمم ومطور شغوف</h3><p>أنا مصمم UI/UX ومطور واجهات أمامية بخبرة تزيد عن 5 سنوات. أنا متخصص في إنشاء تجارب مستخدم بديهية وجذابة تساعد الشركات على التواصل مع عملائها.</p><p>يجمع نهجي بين مبادئ التصميم الجمالي ومنهجيات تتمحور حول المستخدم لتقديم منتجات ليست جذابة بصريًا فحسب، بل أيضًا وظيفية للغاية وسهلة الاستخدام. أنا أؤمن بقوة التصميم المدروس لحل المشكلات الحقيقية.</p><div class="about-info"><div class="row"><div class="col-md-6"><div class="info-item"><span>الاسم:</span> جون أندرسون</div><div class="info-item"><span>البريد الإلكتروني:</span> john@example.com</div><div class="info-item"><span>الهاتف:</span> +1 234 567 8900</div></div><div class="col-md-6"><div class="info-item"><span>العمر:</span> 28</div><div class="info-item"><span>من:</span> نيويورك، الولايات المتحدة الأمريكية</div><div class="info-item"><span>عمل حر:</span> متاح</div></div></div></div><a href="#" class="btn btn-primary mt-4">تحميل السيرة الذاتية</a></div></div>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="services">
+        <div class="container">
+            <div class="row"><div class="col-12"><div class="section-title text-center" data-aos="fade-up"><h2>خدماتي</h2><p>ما يمكنني فعله لك</p></div></div></div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><div class="service-item"><div class="service-icon"><i class="fas fa-paint-brush"></i></div><h4>تصميم UI/UX</h4><p>إنشاء واجهات مستخدم جميلة وبديهية وعملية تعزز تجربة المستخدم وتزيد من التفاعل.</p></div></div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><div class="service-item"><div class="service-icon"><i class="fas fa-code"></i></div><h4>تطوير الويب</h4><p>بناء مواقع وتطبيقات ويب سريعة التحميل ومتجاوبة مع أكواد نظيفة وسهلة الصيانة.</p></div></div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><div class="service-item"><div class="service-icon"><i class="fas fa-mobile-alt"></i></div><h4>تصميم متجاوب</h4><p>إنشاء مواقع ويب تعمل بسلاسة عبر جميع الأجهزة، من أجهزة الكمبيوتر المكتبية إلى الهواتف الذكية.</p></div></div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><div class="service-item"><div class="service-icon"><i class="fas fa-search"></i></div><h4>تحسين محركات البحث (SEO)</h4><p>تحسين رؤية موقع الويب في محركات البحث لجلب المزيد من الزيارات العضوية إلى عملك.</p></div></div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><div class="service-item"><div class="service-icon"><i class="fas fa-drafting-compass"></i></div><h4>هوية العلامة التجارية</h4><p>تطوير هويات بصرية متماسكة تعبر عن قيم علامتك التجارية وتجذب جمهورك المستهدف.</p></div></div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><div class="service-item"><div class="service-icon"><i class="fas fa-camera"></i></div><h4>تصوير فوتوغرافي</h4><p>التقاط صور عالية الجودة تحكي قصتك وتعزز حضورك الرقمي.</p></div></div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row"><div class="col-12"><div class="section-title text-center" data-aos="fade-up"><h2>أعمالي</h2><p>أحدث أعمالي</p></div></div></div>
+            <div class="row"><div class="col-12"><ul class="portfolio-filter" data-aos="fade-up"><li><a href="#" class="active" data-filter="*">الكل</a></li><li><a href="#" data-filter=".web">تصميم الويب</a></li><li><a href="#" data-filter=".app">تصميم التطبيقات</a></li><li><a href="#" data-filter=".brand">العلامات التجارية</a></li><li><a href="#" data-filter=".photo">التصوير الفوتوغرافي</a></li></ul></div></div>
+            <div class="row portfolio-container">
+                <div class="col-lg-4 col-md-6 portfolio-item web" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="100"><div class="portfolio-img"><img src="a1.png" alt="عنصر المحفظة 1"><div class="portfolio-overlay"><h4>مشروع تصميم ويب</h4><p>تصميم ويب، تطوير</p><a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a></div></div></div>
+                <div class="col-lg-4 col-md-6 portfolio-item app" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200"><div class="portfolio-img"><img src="a1.png" alt="عنصر المحفظة 2"><div class="portfolio-overlay"><h4>واجهة مستخدم تطبيق جوال</h4><p>تصميم تطبيقات، UI/UX</p><a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a></div></div></div>
+                <div class="col-lg-4 col-md-6 portfolio-item brand" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="300"><div class="portfolio-img"><img src="a1.png" alt="عنصر المحفظة 3"><div class="portfolio-overlay"><h4>هوية العلامة التجارية</h4><p>العلامات التجارية، تصميم شعار</p><a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a></div></div></div>
+                <div class="col-lg-4 col-md-6 portfolio-item photo" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="400"><div class="portfolio-img"><img src="a1.png" alt="عنصر المحفظة 4"><div class="portfolio-overlay"><h4>تصوير المنتجات</h4><p>تصوير فوتوغرافي</p><a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a></div></div></div>
+                <div class="col-lg-4 col-md-6 portfolio-item web" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="500"><div class="portfolio-img"><img src="a1.png" alt="عنصر المحفظة 5"><div class="portfolio-overlay"><h4>موقع تجارة إلكترونية</h4><p>تصميم ويب، تطوير</p><a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a></div></div></div>
+                <div class="col-lg-4 col-md-6 portfolio-item app" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="600"><div class="portfolio-img"><img src="a1.png" alt="عنصر المحفظة 6"><div class="portfolio-overlay"><h4>واجهة مستخدم تطبيق لياقة بدنية</h4><p>تصميم تطبيقات، UI/UX</p><a href="#" class="btn btn-sm btn-light view-portfolio-item" data-toggle="modal" data-target="#portfolioModal">عرض التفاصيل</a></div></div></div>
+            </div>
+        </div>
+    </section>
+    <section id="resume" class="resume">
+        <div class="container">
+            <div class="row"><div class="col-12"><div class="section-title text-center" data-aos="fade-up"><h2>سيرتي الذاتية</h2><p>التعليم والخبرة</p></div></div></div>
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000"><h3 class="mb-4">التعليم</h3><div class="resume-item"><div class="resume-header"><span class="resume-year">2015 - 2017</span><h4 class="resume-title">درجة الماجستير في تصميم UI/UX</h4><p class="resume-company">جامعة نيويورك</p></div><p>أكملت درجة الماجستير بامتياز...</p></div></div>
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000"><h3 class="mb-4">الخبرة</h3><div class="resume-item"><div class="resume-header"><span class="resume-year">2020 - حالي</span><h4 class="resume-title">مصمم UI/UX أول</h4><p class="resume-company">شركة حلول إبداعية</p></div><p>أقود فريق التصميم في إنشاء واجهات المستخدم...</p></div></div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="row"><div class="col-12"><div class="section-title text-center" data-aos="fade-up"><h2>مهاراتي</h2><p>ما أجيده</p></div></div></div>
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000"><div class="skill-item"><div class="skill-info"><span class="skill-name">HTML/CSS</span><span class="skill-percent">95%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div></div></div>
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000"><div class="skill-item"><div class="skill-info"><span class="skill-name">تصميم UI/UX</span><span class="skill-percent">95%</span></div><div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div></div></div>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="row"><div class="col-12"><div class="section-title text-center" data-aos="fade-up"><h2>الشهادات</h2><p>ما يقوله العملاء</p></div></div></div>
+            <div class="row"><div class="col-12" data-aos="fade-up" data-aos-duration="1000"><div class="owl-carousel testimonial-carousel"><div class="testimonial-item"><div class="testimonial-img"><img src="a1.png" alt="العميل 1"></div><div class="testimonial-text"><i class="fas fa-quote-left"></i><p>جون مصمم استثنائي...</p></div></div></div></div></div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="row"><div class="col-12"><div class="section-title text-center" data-aos="fade-up"><h2>اتصل بي</h2><p>تواصل معي</p></div></div></div>
+            <div class="row"><div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><div class="contact-info-item"><div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div><div class="contact-info-text"><h4>الموقع</h4><p>123 برودواي، نيويورك...</p></div></div></div></div>
+            <div class="row"><div class="col-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><form class="contact-form"><div class="row"><div class="col-md-6"><div class="form-group"><input type="text" class="form-control" name="name" placeholder="اسمك" required></div></div><div class="col-12"><button type="submit" class="btn btn-primary">إرسال الرسالة</button></div></div><div id="contactMessage" class="mt-3"></div></form></div></div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p>&copy; 2025 سيلفر. جميع الحقوق محفوظة | صمم بواسطة <a href="#">جون أندرسون</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <div class="modal fade portfolio-modal" id="portfolioModal" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="portfolioModalLabel"></h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><img id="modalPortfolioImage" src="" alt="Portfolio Image" class="img-fluid"></div></div>
+        </div>
+    </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
@@ -460,64 +797,78 @@
     
     <script>
         $(document).ready(function() {
-            // Initialize AOS
-            AOS.init({
-                once: true // Animate elements only once
+            // Preloader
+            $(window).on('load', function() {
+                $('#preloader').fadeOut('slow');
             });
             
-            // --- START: SCROLL-RELATED FUNCTIONALITY FIXES (Steps 5 & 9) ---
+            // Initialize AOS
+            AOS.init({
+                once: true // Animation happens only once
+            });
 
-            const scrollToTopBtn = $('.scroll-to-top-btn');
-            const navbar = $('.navbar');
-            let throttleTimer = false;
-
-            // Throttled scroll handler for performance
-            const handleScroll = () => {
-                if (throttleTimer) {
-                    return;
-                }
-                throttleTimer = true;
-                setTimeout(() => {
-                    const scrollY = $(window).scrollTop();
-                    
-                    // Logic for sticky navbar
-                    if (scrollY > 50) {
-                        navbar.addClass('sticky');
-                    } else {
-                        navbar.removeClass('sticky');
-                    }
-                    
-                    // Step 5: Logic for scroll-to-top button visibility (trigger at 200px)
-                    if (scrollY > 200) {
-                        scrollToTopBtn.addClass('show');
-                    } else {
-                        scrollToTopBtn.removeClass('show');
-                    }
-                    
-                    // Update active nav link on scroll
-                    updateActiveNavLink(scrollY);
-
-                    throttleTimer = false;
-                }, 200); // Throttling delay of 200ms
-            };
-
-            const updateActiveNavLink = (scrollDistance) => {
-                scrollDistance += 100; // Offset for sticky header
-                $('section').each(function() {
-                    if ($(this).position().top <= scrollDistance && $(this).position().top + $(this).height() > scrollDistance) {
-                        $('.navbar-nav a').removeClass('active');
-                        $('.navbar-nav a[href="#' + $(this).attr('id') + '"]').addClass('active');
-                    }
-                });
-            };
-
-            $(window).on('scroll', handleScroll);
+            // ========================================
+            // START: Scroll-to-Top JavaScript Fixes
+            // ========================================
             
-            // --- END: SCROLL-RELATED FUNCTIONALITY FIXES ---
+            // Step 5 & 9: Throttling function to improve performance
+            function throttle(func, limit) {
+                let inThrottle;
+                return function() {
+                    const args = arguments;
+                    const context = this;
+                    if (!inThrottle) {
+                        func.apply(context, args);
+                        inThrottle = true;
+                        setTimeout(() => inThrottle = false, limit);
+                    }
+                }
+            }
 
-            // Smooth scrolling for all anchor links
-            $('a[href*="#"]').on('click', function(e) {
-                if (this.hash !== '' && $(this.hash).length) {
+            const scrollToTopBtn = $('.scroll-to-top');
+
+            // Throttled scroll event handler
+            const handleScroll = () => {
+                // Navbar sticky logic
+                if ($(window).scrollTop() > 50) {
+                    $('.navbar').addClass('sticky');
+                } else {
+                    $('.navbar').removeClass('sticky');
+                }
+
+                // Step 5: Scroll-to-top button visibility logic (trigger at 200px)
+                if ($(window).scrollTop() > 200) {
+                    scrollToTopBtn.addClass('show');
+                } else {
+                    scrollToTopBtn.removeClass('show');
+                }
+            };
+            
+            // Attach the throttled listener
+            $(window).on('scroll', throttle(handleScroll, 200));
+
+            // Click handler for the scroll-to-top button
+            scrollToTopBtn.on('click', function() {
+                const btn = $(this);
+                // Step 4: Add '.clicked' class for press animation
+                btn.addClass('clicked'); 
+
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 800, 'swing', function() {
+                    // Remove class after animation is complete
+                    btn.removeClass('clicked');
+                });
+                return false;
+            });
+            
+            // ========================================
+            // END: Scroll-to-Top JavaScript Fixes
+            // ========================================
+
+            // Smooth scrolling for navigation links
+            $('a.nav-link').on('click', function(e) {
+                if (this.hash !== '') {
                     e.preventDefault();
                     const hash = this.hash;
                     $('html, body').animate({
@@ -526,21 +877,70 @@
                 }
             });
             
-            // Click handler for the scroll-to-top button
-            scrollToTopBtn.on('click', function() {
-                $('html, body').animate({ scrollTop: 0 }, 800);
+            // Update active nav link on scroll
+            $(window).scroll(function() {
+                var scrollDistance = $(window).scrollTop() + 100;
+                $('.navbar-nav .nav-link').each(function() {
+                    var link = $(this);
+                    var targetId = link.attr('href');
+                    if (targetId.startsWith('#') && $(targetId).length) {
+                        var targetSection = $(targetId);
+                        if (targetSection.offset().top <= scrollDistance && 
+                            (targetSection.offset().top + targetSection.outerHeight()) > scrollDistance) {
+                            $('.navbar-nav .nav-link').removeClass('active');
+                            link.addClass('active');
+                            return false; 
+                        }
+                    }
+                });
+            });
+            
+            // Testimonial Carousel
+            $('.testimonial-carousel').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                rtl: true,
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    992: { items: 3 }
+                }
+            });
+            
+            // Portfolio isotope and filter
+            var portfolioIsotope = $('.portfolio-container').isotope({
+                itemSelector: '.portfolio-item',
+                layoutMode: 'fitRows',
+                originLeft: false 
+            });
+            
+            $('.portfolio-filter li a').on('click', function() {
+                $('.portfolio-filter li a').removeClass('active');
+                $(this).addClass('active');
+                portfolioIsotope.isotope({ filter: $(this).data('filter') });
                 return false;
             });
 
-            // Step 4: Add '.clicked' class for press animation
-            scrollToTopBtn.on('mousedown', function() {
-                $(this).addClass('clicked');
-            }).on('mouseup mouseleave', function() {
-                $(this).removeClass('clicked');
+            // Portfolio image modal
+            $('.view-portfolio-item').on('click', function() {
+                const imageUrl = $(this).closest('.portfolio-item').find('.portfolio-img img').attr('src');
+                $('#modalPortfolioImage').attr('src', imageUrl);
             });
-
-            // Other initializations from the original file (Testimonials, Portfolio, etc.)
-            // These can be pasted back in from the original file if needed.
+            
+            // Contact form submission
+            $('.contact-form').on('submit', function(e) {
+                e.preventDefault(); 
+                const contactMessage = $('#contactMessage');
+                contactMessage.removeClass('success error').hide();
+                setTimeout(function() {
+                    contactMessage.addClass('success').text('تم إرسال رسالتك بنجاح! (هذه محاكاة)').show();
+                    $('.contact-form')[0].reset();
+                }, 1000);
+            });
         });
     </script>
 </body>
